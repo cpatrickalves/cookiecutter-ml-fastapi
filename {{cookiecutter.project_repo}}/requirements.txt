@@ -1,0 +1,4 @@
+setuptools
+
+# local package
+-e .

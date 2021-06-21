@@ -1,12 +1,9 @@
 {
-    "project_name": "Name of the project",
-    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-    "project_short_description": "A short description of the project",
-    "machine_learn_model_path": "./ml/model/",
-    "machine_learn_model_name": "model.pkl",
-    "full_name": "Your name",
+    "project_name": "project_name",
+    "project_repo": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "description": "A short description of the project",
+    "author_name": "Your name (or your organization/company/team)",
     "email": "Your address email (you@example.com)",
-    "release_date": "{% now 'local' %}",
     "version": "0.1.0",
     "_extensions": [
         "jinja2_time.TimeExtension"
