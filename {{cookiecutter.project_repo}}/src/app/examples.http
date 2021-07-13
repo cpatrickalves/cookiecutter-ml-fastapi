@@ -1,0 +1,36 @@
+# You need to install the RestClient plugin on VSCode to use this file
+@localhost = http://localhost:8080
+@production_host = 127.0.0.1:8080
+@host = {{localhost}}
+
+
+###/============= Check Status  ============= /
+
+GET {{host}}/status HTTP/1.1
+
+
+###/============= S1 - Classify issues ============= /
+
+POST {{host}}/predict HTTP/1.1
+content-type: application/json
+
+{
+  "secret_key": "python42",
+  "some_input": "some_input"
+}
+
+
+###/============= S1 -Training ============= /
+
+POST {{host}}/train HTTP/1.1
+content-type: application/json
+
+{
+  "dataset_id": "SOME_ID",
+  "model_id": "SOME_ID",
+  "secret_key": "secret_key"
+}
+
+###/============= Get Models ============= /
+
+GET {{host}}/models HTTP/1.1
