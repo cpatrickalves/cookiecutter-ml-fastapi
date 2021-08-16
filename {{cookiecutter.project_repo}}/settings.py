@@ -25,5 +25,5 @@ logging.basicConfig(
 )
 logger.configure(handlers=[{"sink": sys.stderr, "level": LOGGING_LEVEL}])
 
-MODEL_PATH = config("MODEL_PATH", default="{{cookiecutter.machine_learn_model_path}}")
-MODEL_NAME = config("MODEL_NAME", default="{{cookiecutter.machine_learn_model_name}}")
+MODEL_PATH = config("MODEL_PATH", default="models")
+MODEL_NAME = config("MODEL_NAME", default="model.pkl")
