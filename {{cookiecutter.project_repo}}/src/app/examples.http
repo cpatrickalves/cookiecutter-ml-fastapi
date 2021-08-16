@@ -1,17 +1,16 @@
 # You need to install the RestClient plugin on VSCode to use this file
 @localhost = http://localhost:8080
 @production_host = 127.0.0.1:8080
-@host = {{localhost}}
 
 
 ###/============= Check Status  ============= /
 
-GET {{host}}/status HTTP/1.1
+GET http://localhost:8080/status HTTP/1.1
 
 
 ###/============= S1 - Classify issues ============= /
 
-POST {{host}}/predict HTTP/1.1
+POST http://localhost:8080/predict HTTP/1.1
 content-type: application/json
 
 {
@@ -22,7 +21,7 @@ content-type: application/json
 
 ###/============= S1 -Training ============= /
 
-POST {{host}}/train HTTP/1.1
+POST http://localhost:8080/train HTTP/1.1
 content-type: application/json
 
 {
@@ -33,4 +32,4 @@ content-type: application/json
 
 ###/============= Get Models ============= /
 
-GET {{host}}/models HTTP/1.1
+GET {{localhost}}/models HTTP/1.1
