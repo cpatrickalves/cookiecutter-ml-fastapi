@@ -1,5 +1,4 @@
 import os
-
 from core.errors import PredictException, ModelLoadException
 from core.config import MODEL_NAME, MODEL_PATH
 from loguru import logger
@@ -32,6 +31,7 @@ class MachineLearningModelHandlerScore(object):
             message = f"Machine learning model at {path} not exists!"
             logger.error(message)
             raise FileNotFoundError(message)
+
         model = load_wrapper(path)
         if not model:
             message = f"Model {model} could not load!"
