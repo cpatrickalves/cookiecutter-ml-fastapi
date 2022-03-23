@@ -5,5 +5,9 @@ loguru==0.5.3
 python-decouple==3.4
 uvicorn==0.14.0
 
+# dev
+bump2version
+prospector
+
 # local package
 -e .
